@@ -1,0 +1,227 @@
+@import "./variables.scss";
+@import "./scroll.scss";
+    
+#Hed {
+    width: $width;
+    height: 200px;
+    @extend %framelight;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    .logo {
+        float: left;
+        margin: 7px 150px 7px 7px;
+    }
+
+    button {
+        width: 100px;
+        height: 80px;
+        display: inline-block;
+        font-size:25px;
+        margin-top: 40px;
+        @extend %button; 
+    }
+
+    .decor button {
+        transition-duration: 1s;
+        transition-delay: 0,5s;
+    }
+    
+    .decor button:hover {background-color:$colorred; border-radius:25px;}
+    .decor {
+        position: relative;
+        display: inline-block;  
+    }
+
+    .submenu {
+        display: none;
+        background-color:$color;
+        border-radius: 10px;
+        width: 100px;
+    }
+    
+    a:hover {background-color:$colorred;}
+    .submenu a {
+        color: black;
+        padding: 20px;
+        text-decoration: none;
+        display: block;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        cursor: pointer;
+    }
+    .decor:hover .submenu {
+        display: block;  
+    }
+    .books button {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .details {
+        display:inline-block;
+        text-decoration: none;
+        text-align: center;
+        background-color: $colorred;
+        margin-top: 40px;
+        color: #fff;
+        position: absolute;
+        top:-40px;
+        left:-100px;
+        width: inherit;
+        height: inherit;
+        transition: left 1s;
+    }
+
+    .books:hover .details {left:0;}  
+}       
+
+.cont {
+        width: $width;
+        height: 600px;
+        @extend %frameblue;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+        display: flex;
+        justify-content: flex-end;
+        .left_menu {
+            width: 30%;
+            height: 600px;
+            margin-left: 50px; 
+            display: grid;
+            grid-template-rows: repeat(4, 4fr);
+            .show, .art, .ins, .tr {
+                width: 80%;
+                height: 50%;
+                text-align: center;
+                font-size: 30px;
+                display: grid;
+                align-items: center;
+                margin-top: 30px;
+                @extend %leftmenu;
+            }
+            
+        }
+        .text_menu {
+            width: 60%;
+            height: 580px;
+            border: $borderBlack;
+            margin: 10px;
+            overflow-y: scroll;
+            text-indent: 10px; 
+            img {
+                float: left;
+                margin: 7px 7px 7px 7px;
+            }
+        }
+        
+        .right_menu {
+            width: 30%;
+            height: 600px;
+            border: $borderBlack;
+            overflow-y: scroll;
+            .img_2 {
+                float: right;
+                margin: 7px;
+            }
+        }      
+}
+#footer {
+    width: 100%;
+    height: 20%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    left: 7px; bottom: 0; right: 7px;
+    @extend %framelight;
+    text-align: left;
+    .img_3 {
+        position: relative;
+        left: 40%;
+        bottom: 100px;
+    }
+    hr {
+        background-color: black;
+        color: black;
+        height: 2px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+}
+.register button {
+    display: inline-block;
+    text-align: center;
+    border-radius: $borderrad;
+    height: 30px;
+    width: 80px;
+    font-size: 20px;
+    margin-left: 90%;
+}
+
+.wrapper {
+    width: 30%;
+    height: 75%;
+    border: 2px solid rgb(6, 80, 87); 
+    background-color:$color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 35%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    label {
+        display: block;
+        margin-top: 5%;
+        margin-left: 15%;
+        font-size: 15px;
+        text-align: left;
+    }
+    
+    input {
+        width: 200px;
+        height: 30px;
+        margin-left: 10%;
+        box-shadow: $boxShadow;   
+    }
+    
+    .wrapper_col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-left: 25%;
+    }
+    
+    .gender {
+        margin-left: 25%;
+        flex-direction: row;
+    }
+    
+    .gender input, .birth {
+        width: 15px;
+        height: 15px;
+        margin-left: 25%;
+    }
+}
+
+#zatemnenie {
+    background: $dark;
+    width: $width;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#zatemnenie:target {display: block;}
+.close {
+    display: inline-block;
+    color: black;
+    padding: 0 12px;
+    width: 80px;
+    height: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 37%;
+    margin-top: auto;
+    cursor:pointer;
+    @extend %frameblue;
+}

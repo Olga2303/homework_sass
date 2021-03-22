@@ -1,0 +1,42 @@
+$width:100%;
+$color: blanchedalmond;
+$colorred:rgba(235, 69, 28, 0.733);
+$colorblue:rgb(177, 228, 230);
+$boxShadow:0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$borderOlive:2px solid rgb(104, 122, 68);
+$borderBlack:1px solid black;
+$borderrad:10px;
+$borderValid:1px solid green;
+$borderInval:1px solid red;
+$dark:rgba(102, 102, 102, 0.5);
+
+
+%scrollthumb {
+    background-color: $color;
+    border-radius: $borderrad;
+    border: $borderBlack;
+    width: 15px;
+    height: 30px; 
+}
+%button {
+    box-shadow: $boxShadow;
+    border: $borderOlive;
+    border-radius: $borderrad;
+}
+%frameblue {
+    border: $borderBlack;
+    background-color: $colorblue;
+}
+%framelight {
+    border: $borderBlack;
+    background-color: $color;
+}
+%leftmenu {
+    border: $borderBlack;
+    background-color: $colorred;
+    border-radius: $borderrad;
+    box-shadow: $boxShadow;
+}
+
+
+

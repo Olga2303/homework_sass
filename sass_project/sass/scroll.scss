@@ -1,0 +1,39 @@
+body::-webkit-scrollbar {width: 20px;}
+body::-webkit-scrollbar-track {border-radius: 10px;background-color: $colorblue;}
+body::-webkit-scrollbar-button {border-radius: 30%;background-color:$colorred;}
+body::-webkit-scrollbar-thumb {@extend %scrollthumb;}
+
+.right_menu::-webkit-scrollbar {width: 15px;}
+           ::-webkit-scrollbar-track {border-radius: $borderrad; background-color: $color;}
+           ::-webkit-scrollbar-button {border-radius:30%; background-color:$colorred;}
+           ::-webkit-scrollbar-thumb {@extend %scrollthumb;}
+
+.text_menu::-webkit-scrollbar {width: 15px;}
+          ::-webkit-scrollbar-track {border-radius:10px; background-color: $color;}
+          ::-webkit-scrollbar-button {border-radius:30%; background-color:$colorred;}
+          ::-webkit-scrollbar-thumb {@extend %scrollthumb;} 
+
+//не сработала анимация у следующих дивов://
+.show:hover {transform: scale(1,1.5); background-color:$color;}//
+.art:hover {transform: scale(1,1.5); background-color: $color;}
+.ins:hover {transform: scale(1,1.5); background-color: $color;}
+.tr:hover {transform: scale(1,1.5); background-color: $color;}
+
+.close:hover   {background-color: $colorblue;} 
+
+#name:valid {border:$borderValid;}
+#name:invalid {border:$borderInval;}
+
+#email:valid {border:$borderValid;}
+#email:invalid {border:$borderInval;}
+
+#password:valid {border:$borderValid;}
+#password:invalid {border:$borderInval;}
+
+#number:valid {border:$borderValid;}
+#number:invalid {border:$borderInval;}
+
+#date:valid {border:$borderValid;}
+#date:invalid {border:$borderInval;}
+
+form:invalid button [type="submit"] {border:$borderInval;}
